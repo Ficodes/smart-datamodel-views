@@ -1,0 +1,161 @@
+<style>
+    .list-group {
+        display: flex;
+        flex-direction: column;
+        padding-left: 0;
+        margin-bottom: 0;
+    }
+
+    .list-group-item-action {
+        width: 100%;
+        color: #495057;
+        text-align: inherit;
+    }
+
+    .list-group-item-action:hover, .list-group-item-action:focus {
+        z-index: 1;
+        color: #495057;
+        text-decoration: none;
+        background-color: #f8f9fa;
+    }
+
+    .list-group-item-action:active {
+        color: #212529;
+        background-color: #e9ecef;
+    }
+
+    .list-group-item {
+        position: relative;
+        display: block;
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+    }
+
+    .list-group-item:first-child {
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+    }
+
+    .list-group-item:last-child {
+        border-bottom-right-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+    }
+
+    .list-group-item.disabled, .list-group-item:disabled {
+        color: #6c757d;
+        pointer-events: none;
+        background-color: #fff;
+    }
+
+    .list-group-item.active {
+        z-index: 2;
+        color: #fff;
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+    }
+
+    .list-group-item + .list-group-item {
+        border-top-width: 0;
+    }
+
+    .list-group-item + .list-group-item.active {
+        margin-top: -1px;
+        border-top-width: 1px;
+    }
+
+    .list-group-horizontal {
+        flex-direction: row;
+    }
+
+    .list-group-horizontal .list-group-item:first-child {
+        border-bottom-left-radius: 0.25rem;
+        border-top-right-radius: 0;
+    }
+
+    .list-group-horizontal .list-group-item:last-child {
+        border-top-right-radius: 0.25rem;
+        border-bottom-left-radius: 0;
+    }
+
+    .list-group-horizontal .list-group-item.active {
+        margin-top: 0;
+    }
+
+    .list-group-horizontal .list-group-item + .list-group-item {
+        border-top-width: 1px;
+        border-left-width: 0;
+    }
+
+    .list-group-horizontal .list-group-item + .list-group-item.active {
+        margin-left: -1px;
+        border-left-width: 1px;
+    }
+
+    .scroll-content {
+        max-height: 365px;
+        position: relative;
+        display: block;
+        overflow: auto;
+    }
+
+</style>
+<div class="scroll-content">
+    {% if species %}
+    <p><b>Species: </b> {{species }}</p>
+    {% endif %}
+    {% if relatedSource %}
+    <h5>Related sources</h5>
+    {% for source in relatedSource %}
+    <p>Application: {{ source.application}}</p>
+    <p>ApplicationEntityId: {{ source.applicationEntityId}}</p>
+    {% endfor %}
+    {% endif %}
+    {% if birthdate %}
+    <p><b><i class="fa fa-fw fa-clock"/>Birth Date: </b> {{ birthdate | date }}</p>
+    {% endif %}
+    {% if dateModified %}
+    <p><b><i class="fa fa-fw fa-clock"/> Modified: </b> {{ dateModified | date }}</p>
+    {% endif %}
+    {% if legalId %}
+    <p><b>LegalId: </b> {{legalId }}</p>
+    {% endif %}
+    {% if sex %}
+    <p><b>Sex: </b> {{sex }}</p>
+    {% endif %}
+    {% if breed %}
+    <p><b>Sex: </b> {{breed }}</p>
+    {% endif %}
+    {% if calvedBy %}
+    <p><b>Calved By: </b> {{calvedBy }}</p>
+    {% endif %}
+    {% if siredBy %}
+    <p><b>Sired By: </b> {{siredBy }}</p>
+    {% endif %}
+    {% if weight %}
+    <p><b>Weight: </b> {{weight }}</p>
+    {% endif %}
+    {% if ownedBy %}
+    <p><a href="{{ownedBy}}">{{ownedBy}}</a></p>
+    {% endif %}
+    {% if locatedAt %}
+    <p><b>Located At: </b> {{locatedAt }}</p>
+    {% endif %}
+    {% if phenologicalCondition %}
+    <p><b>Phenological Condition: </b> {{phenologicalCondition }}</p>
+    {% endif %}
+    {% if reproductiveCondition %}
+    <p><b>Reproductive Condition: </b> {{reproductiveCondition }}</p>
+    {% endif %}
+    {% if healthCondition %}
+    <p><b>Health Condition: </b> {{healthCondition }}</p>
+    {% endif %}
+    {% if fedWith %}
+    <p><b>Fed With: </b> {{fedWith }}</p>
+    {% endif %}
+    {% if welfareCondition %}
+    <p><b>Welfare Condition: </b> {{welfareCondition }}</p>
+    {% endif %}
+
+</div>

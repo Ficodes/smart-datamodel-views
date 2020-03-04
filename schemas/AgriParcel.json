@@ -1,0 +1,13 @@
+{
+  "id":"id",
+  "icon":"",
+  "tooltip":"id",
+  "title":[
+    "name",
+    "id"
+  ],
+  "infoWindow":"{%AgriParcel.html%}",
+  "currentLocation":"currentLocation",
+  "location":"location",
+  "style":""
+}

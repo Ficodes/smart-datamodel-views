@@ -1,0 +1,14 @@
+{
+  "id":"id",
+  "icon":"",
+  "tooltip":"id",
+  "title":[
+    "name",
+    "legalId",
+    "id"
+  ],
+  "infoWindow":"{%Animal.html%}",
+  "currentLocation":"currentLocation",
+  "location":"location",
+  "style":""
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "type": "OffStreetParking",
+    "schema": "http://127.0.0.1:8080/schemas/OffStreetParking.json"
+  },
+  {
+    "type": "AgriFarm",
+    "schema": "http://127.0.0.1:8080/schemas/AgriFarm.json"
+  },
+  {
+    "type": "AgriParcel",
+    "schema": "http://127.0.0.1:8080/schemas/AgriParcel.json"
+  },
+  {
+    "type": "Animal",
+    "schema": "http://127.0.0.1:8080/schemas/Animal.json"
+  }
+]
