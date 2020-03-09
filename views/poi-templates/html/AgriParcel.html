@@ -114,8 +114,10 @@
     {% if area %}
     <p><b>Modified: </b> {{ area }}</p>
     {% endif %}
-    {% if category %}
-    <p><b>Category: </b> {{ area | join(",")}}</p>
+    {% if category and  category | is_arr %}
+    <p><b>Category: </b> {{ category | join(",")}}</p>
+    {%else %}
+    <p><b>Category: </b> {{ category }}</p>
     {% endif %}
     {% if relatedSource %}
     <h5>Related sources</h5>

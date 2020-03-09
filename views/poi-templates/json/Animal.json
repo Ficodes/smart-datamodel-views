@@ -1,14 +1,123 @@
 {
-  "id":"id",
-  "icon":"",
-  "tooltip":"id",
-  "title":[
+  "id": "id",
+  "icon": {
+    "default": "https://www.iof2020.eu/img/theme/meat.svg",
+    "rules": [
+      {
+        "event": {
+          "type": "",
+          "params": {
+            "success": "https://www.iof2020.eu/img/theme/dairy-cattle.svg"
+          }
+        },
+        "conditions": {
+          "all": [
+            {
+              "fact": "species",
+              "operator": "equal",
+              "value": "dairy cattle"
+            }
+          ]
+        }
+      },
+      {
+        "event": {
+          "type": "",
+          "params": {
+            "success": "https://www.iof2020.eu/img/theme/beef-cattle.svg"
+          }
+        },
+        "conditions": {
+          "all": [
+            {
+              "fact": "species",
+              "operator": "equal",
+              "value": "beef cattle"
+            }
+          ]
+        }
+      },
+      {
+        "event": {
+          "type": "",
+          "params": {
+            "success": "https://www.iof2020.eu/img/theme/sheep.svg"
+          }
+        },
+        "conditions": {
+          "all": [
+            {
+              "fact": "species",
+              "operator": "equal",
+              "value": "sheep"
+            }
+          ]
+        }
+      },
+      {
+        "event": {
+          "type": "",
+          "params": {
+            "success": "https://www.iof2020.eu/img/theme/goat.svg"
+          }
+        },
+        "conditions": {
+          "all": [
+            {
+              "fact": "species",
+              "operator": "equal",
+              "value": "goat"
+            }
+          ]
+        }
+      },
+      {
+        "event": {
+          "type": "",
+          "params": {
+            "success": "https://www.iof2020.eu/img/theme/horse.svg"
+          }
+        },
+        "conditions": {
+          "all": [
+            {
+              "fact": "species",
+              "operator": "equal",
+              "value": "horse"
+            }
+          ]
+        }
+      },
+      {
+        "event": {
+          "type": "",
+          "params": {
+            "success": "https://www.iof2020.eu/img/theme/pig.svg"
+          }
+        },
+        "conditions": {
+          "all": [
+            {
+              "fact": "species",
+              "operator": "equal",
+              "value": "pig"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "tooltip": "id",
+  "title": [
     "name",
     "legalId",
     "id"
   ],
-  "infoWindow":"{%Animal.html%}",
-  "currentLocation":"currentLocation",
-  "location":"location",
-  "style":""
+  "infoWindow": "{%Animal.html%}",
+  "currentLocation": "currentLocation",
+  "location": "location",
+  "style": {
+    "fill": "rgba(220, 90, 90, 0.3)",
+    "stroke": "rgb(220, 90, 90)"
+  }
 }

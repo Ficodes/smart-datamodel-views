@@ -114,8 +114,10 @@
     {% if area %}
     <p><b>Modified: </b> {{ area }}</p>
     {% endif %}
-    {% if category %}
-    <p><b>Category: </b> {{ area | join(",")}}</p>
+    {% if category and  category | is_arr %}
+    <p><b>Category: </b> {{ category | join(",")}}</p>
+    {%else %}
+    <p><b>Category: </b> {{ category }}</p>
     {% endif %}
     {% if relatedSource %}
     <h5>Related sources</h5>
@@ -146,11 +148,15 @@
     {% if ownedBy %}
     <p><b> Owned By: </b> {{ ownedBy }}</p>
     {% endif %}
-    {% if hasBuilding %}
-    <p><b>Building: </b> {{ hasBuilding | join(",") }}</p>
+    {% if hasBuilding and  hasBuilding | is_arr %}
+    <p><b>Building: </b> {{ hasBuilding | join(",")}}</p>
+    {%else %}
+    <p><b>Building: </b> {{ hasBuilding }}</p>
     {% endif %}
 
-    {% if hasAgriParcel %}
-    <p><b>Parcel: </b> {{ hasAgriParcel | join(",") }}</p>
+    {% if hasAgriParcel and  hasAgriParcel | is_arr %}
+    <p><b>Parcel: </b> {{ hasAgriParcel | join(",")}}</p>
+    {%else %}
+    <p><b>Parcel: </b> {{ hasAgriParcel }}</p>
     {% endif %}
 </div>

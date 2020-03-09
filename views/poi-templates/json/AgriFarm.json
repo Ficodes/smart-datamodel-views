@@ -1,6 +1,6 @@
 {
   "id": "id",
-  "icon": "",
+  "icon": "https://www.iof2020.eu/img/theme/farm.svg",
   "tooltip": "id",
   "title": [
     "name",
@@ -9,5 +9,8 @@
   "infoWindow": "{%AgriFarm.html%}",
   "currentLocation": "currentLocation",
   "location": "location",
-  "style": ""
+  "style": {
+    "fill":"rgba(125, 80, 40, 0.3)",
+    "stroke":"rgb(220, 90, 90)"
+  }
 }
