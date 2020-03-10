@@ -103,70 +103,59 @@
 </style>
 <div class="scroll-content">
     {% if description %}
-        <p>{{description}}</p>
+    <p>{{description}}</p>
     {% endif %}
     {% if createdAt %}
     <p><b><i class="fa fa-fw fa-clock"/> Created: </b> {{ createdAt | date }}</p>
     {% endif %}
     {% if modifiedAt %}
     <p><b><i class="fa fa-fw fa-clock"/> Modified: </b> {{ modifiedAt | date }}</p>
+    {% if source  %}
+    <p><b>Source: </b> {{ source }}</p>
     {% endif %}
-    {% if area %}
-        <p><b>Modified: </b> {{ area }}</p>
     {% endif %}
-    {% if category and  category | is_arr %}
-        <p><b>Category: </b> {{ category | join(",")}}</p>
-    {%else %}
-        <p><b>Category: </b> {{ category }}</p>
+    {% if dataProvider %}
+    <p><b>Data Provider: </b> {{ dataProvider }}</p>
     {% endif %}
-    {% if relatedSource %}
-        <h5>Related sources</h5>
-        {% for source in relatedSource %}
-            <p>Application: {{ source.application}}</p>
-            <p>ApplicationEntityId: {{ source.applicationEntityId}}</p>
-        {% endfor %}
-    {% endif %}
-    {% if seeAlso %}
-        <h5>See Also</h5>
-        {% for item in seeAlso %}
-            <p><a href="{{item | safe}}">{{agroVocConcept | safe}}</a></p>
-        {% endfor %}
-    {% endif %}
-    {% if belongsTo %}
-        <p><b> Belongs To: </b> {{ belongsTo }}</p>
-    {% endif %}
-    {% if ownedBy %}
-        <p><b> Owned By: </b> {{ ownedBy }}</p>
+    {% if entityVersion %}
+    <p><b>Entity Version: </b> {{ entityVersion }}</p>
     {% endif %}
     {% if hasAgriParcelParent %}
-        <p><b>Parent Parcel: </b> {{ hasAgriParcelParent }}</p>
+    <p><b>Parent Parcel: </b> {{ hasAgriParcelParent }}</p>
     {% endif %}
-    {% if hasAgriParcelChildren %}
-        <h5>Children Parcels</h5>
-        <ul class="list-group">
-            {% for child in hasAgriParcelChildren %}
-            <li class="list-group-item"> {{ child }}</li>
-            {% endfor %}
-        </ul>
+    <h5>Soil</h5>
+    <ul class="list-group">
+        {% if soilTemperature %}
+        <li class="list-group-item"><b>Temperature: </b> {{ soilTemperature }}</li>
+        {% endif %}
+        {% if soilMoistureVwc %}
+        <li class="list-group-item"><b>Moisture Vwc: </b> {{ soilMoistureVwc }}</li>
+        {% endif %}
+        {% if soilMoistureEc %}
+        <li class="list-group-item"><b>Moisture Ec: </b> {{ soilMoistureEc }}</li>
+        {% endif %}
+    </ul>
+    {% if airTemperature %}
+    <p><b>Air emperature: </b> {{ airTemperature }}</p>
     {% endif %}
-    {% if hasAgriCrop %}
-        <p><b>Agri Crop: </b> {{ hasAgriCrop }}</p>
+    {% if solarRadiation %}
+    <p><b>Solar Radiation: </b> {{ solarRadiation }}</p>
     {% endif %}
-    {% if cropStatus %}
-        <p><b>Crop Status: </b> {{ cropStatus }}</p>
+    {% if leafRelativeHumidity %}
+    <p><b>Relative Humidity: </b> {{ leafRelativeHumidity }}</p>
     {% endif %}
-    {% if lastPlantedAt %}
-        <p><b>Last PLanted At: </b> {{ lastPlantedAt }}</p>
-    {% endif %}
-    {% if hasAgriSoil %}
-        <p><b>Agri Soil: </b> {{ hasAgriSoil }}</p>
+    {% if atmosphericPressure %}
+    <p><b>Atmospheric Pressure: </b> {{ atmosphericPressure }}</p>
     {% endif %}
     {% if hasDevice %}
-        <h5>Devices</h5>
-        <ul class="list-group">
-            {% for device in hasDevice %}
-            <li class="list-group-item"> {{ device }}</li>
-            {% endfor %}
-        </ul>
+    <h5>Devices</h5>
+    <ul class="list-group">
+        {% for device in hasDevice %}
+        <li class="list-group-item"> {{ device }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    {% if observedAt %}
+    <p><b>Observed At: </b> {{ observedAt }}</p>
     {% endif %}
 </div>

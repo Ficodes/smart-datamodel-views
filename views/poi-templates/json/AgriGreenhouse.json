@@ -1,0 +1,16 @@
+{
+  "id": "id",
+  "icon": "https://www.iof2020.eu/img/theme/greenhouse.svg",
+  "tooltip": "id",
+  "title": [
+    "name",
+    "id"
+  ],
+  "infoWindow": "{%AgriGreenHouse.html%}",
+  "currentLocation": "currentLocation",
+  "location": "location",
+  "style": {
+    "fill": "rgba(238, 194, 11, 0.3)",
+    "stroke": "rgba(238, 194, 11, 0.9)"
+  }
+}

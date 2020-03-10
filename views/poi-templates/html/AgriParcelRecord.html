@@ -105,11 +105,11 @@
     {% if description %}
     <p>{{description}}</p>
     {% endif %}
-    {% if dateCreated %}
-    <p><b><i class="fa fa-fw fa-clock"/> Created: </b> {{ dateCreated | date }}</p>
+    {% if createdAt %}
+    <p><b><i class="fa fa-fw fa-clock"/> Created: </b> {{ createdAt | date }}</p>
     {% endif %}
-    {% if dateModified %}
-    <p><b><i class="fa fa-fw fa-clock"/> Modified: </b> {{ dateModified | date }}</p>
+    {% if modifiedAt %}
+    <p><b><i class="fa fa-fw fa-clock"/> Modified: </b> {{ modifiedAt | date }}</p>
     {% endif %}
     {% if relatedSource %}
     <h5>Related sources</h5>

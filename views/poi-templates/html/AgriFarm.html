@@ -103,60 +103,60 @@
 </style>
 <div class="scroll-content">
     {% if description %}
-    <p>{{description}}</p>
+        <p>{{description}}</p>
     {% endif %}
-    {% if dateCreated %}
-    <p><b><i class="fa fa-fw fa-clock"/> Created: </b> {{ dateCreated | date }}</p>
+    {% if createdAt %}
+    <p><b><i class="fa fa-fw fa-clock"/> Created: </b> {{ createdAt | date }}</p>
     {% endif %}
-    {% if dateModified %}
-    <p><b><i class="fa fa-fw fa-clock"/> Modified: </b> {{ dateModified | date }}</p>
+    {% if modifiedAt %}
+    <p><b><i class="fa fa-fw fa-clock"/> Modified: </b> {{ modifiedAt | date }}</p>
     {% endif %}
     {% if area %}
-    <p><b>Modified: </b> {{ area }}</p>
+        <p><b>Modified: </b> {{ area }}</p>
     {% endif %}
     {% if category and  category | is_arr %}
-    <p><b>Category: </b> {{ category | join(",")}}</p>
+        <p><b>Category: </b> {{ category | join(",")}}</p>
     {%else %}
-    <p><b>Category: </b> {{ category }}</p>
+        <p><b>Category: </b> {{ category }}</p>
     {% endif %}
     {% if relatedSource %}
-    <h5>Related sources</h5>
-    {% for source in relatedSource %}
-    <p>Application: {{ source.application}}</p>
-    <p>ApplicationEntityId: {{ source.applicationEntityId}}</p>
-    {% endfor %}
+        <h5>Related sources</h5>
+        {% for source in relatedSource %}
+            <p>Application: {{ source.application}}</p>
+            <p>ApplicationEntityId: {{ source.applicationEntityId}}</p>
+        {% endfor %}
     {% endif %}
     {% if seeAlso %}
-    <h5>See Also</h5>
-    {% for item in seeAlso %}
-    <p><a href="{{item | safe}}">{{agroVocConcept | safe}}</a></p>
-    {% endfor %}
+        <h5>See Also</h5>
+        {% for item in seeAlso %}
+            <p><a href="{{item | safe}}">{{agroVocConcept | safe}}</a></p>
+        {% endfor %}
     {% endif %}
     {% if address and address | is_obj %}
-    {{ address | addressProc }} <br/>
+        {{ address | addressProc }} <br/>
     {% elif address %}
-    {{ address }} <br/>
+        {{ address }} <br/>
     {% endif %}
     {% if belongsTo %}
-    <p><b> Belongs To: </b> {{ belongsTo }}</p>
+        <p><b> Belongs To: </b> {{ belongsTo }}</p>
     {% endif %}
     {% if contactPoint %}
-    <h5>Contact</h5>
-    <p><b>Email: </b> {{ contactPoint['email'] }}</p>
-    <p><b>Telephone: </b> {{ contactPoint['telephone'] }}</p>
+        <h5>Contact</h5>
+        <p><b>Email: </b> {{ contactPoint['email'] }}</p>
+        <p><b>Telephone: </b> {{ contactPoint['telephone'] }}</p>
     {% endif %}
     {% if ownedBy %}
-    <p><b> Owned By: </b> {{ ownedBy }}</p>
+        <p><b> Owned By: </b> {{ ownedBy }}</p>
     {% endif %}
     {% if hasBuilding and  hasBuilding | is_arr %}
-    <p><b>Building: </b> {{ hasBuilding | join(",")}}</p>
+        <p><b>Building: </b> {{ hasBuilding | join(",")}}</p>
     {%else %}
-    <p><b>Building: </b> {{ hasBuilding }}</p>
+        <p><b>Building: </b> {{ hasBuilding }}</p>
     {% endif %}
 
     {% if hasAgriParcel and  hasAgriParcel | is_arr %}
-    <p><b>Parcel: </b> {{ hasAgriParcel | join(",")}}</p>
+        <p><b>Parcel: </b> {{ hasAgriParcel | join(",")}}</p>
     {%else %}
-    <p><b>Parcel: </b> {{ hasAgriParcel }}</p>
+        <p><b>Parcel: </b> {{ hasAgriParcel }}</p>
     {% endif %}
 </div>

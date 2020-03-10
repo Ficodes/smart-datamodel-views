@@ -10,7 +10,7 @@
   "currentLocation": "currentLocation",
   "location": "location",
   "style": {
-    "fill":"rgba(125, 80, 40, 0.3)",
-    "stroke":"rgb(220, 90, 90)"
+    "fill": "rgba(125, 80, 40, 0.3)",
+    "stroke": "rgb(220, 90, 90)"
   }
 }

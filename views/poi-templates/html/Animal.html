@@ -103,59 +103,59 @@
 </style>
 <div class="scroll-content">
     {% if species %}
-    <p><b>Species: </b> {{species }}</p>
+        <p><b>Species: </b> {{species }}</p>
     {% endif %}
     {% if relatedSource %}
-    <h5>Related sources</h5>
-    {% for source in relatedSource %}
-    <p>Application: {{ source.application}}</p>
-    <p>ApplicationEntityId: {{ source.applicationEntityId}}</p>
-    {% endfor %}
+        <h5>Related sources</h5>
+        {% for source in relatedSource %}
+            <p>Application: {{ source.application}}</p>
+            <p>ApplicationEntityId: {{ source.applicationEntityId}}</p>
+        {% endfor %}
     {% endif %}
     {% if birthdate %}
-    <p><b><i class="fa fa-fw fa-clock"/>Birth Date: </b> {{ birthdate | date }}</p>
+        <p><b><i class="fa fa-fw fa-clock"/>Birth Date: </b> {{ birthdate | date }}</p>
     {% endif %}
     {% if dateModified %}
-    <p><b><i class="fa fa-fw fa-clock"/> Modified: </b> {{ dateModified | date }}</p>
+        <p><b><i class="fa fa-fw fa-clock"/> Modified: </b> {{ dateModified | date }}</p>
     {% endif %}
     {% if legalId %}
-    <p><b>LegalId: </b> {{legalId }}</p>
+        <p><b>LegalId: </b> {{legalId }}</p>
     {% endif %}
     {% if sex %}
-    <p><b>Sex: </b> {{sex }}</p>
+        <p><b>Sex: </b> {{sex }}</p>
     {% endif %}
     {% if breed %}
-    <p><b>Sex: </b> {{breed }}</p>
+        <p><b>Sex: </b> {{breed }}</p>
     {% endif %}
     {% if calvedBy %}
-    <p><b>Calved By: </b> {{calvedBy }}</p>
+        <p><b>Calved By: </b> {{calvedBy }}</p>
     {% endif %}
     {% if siredBy %}
-    <p><b>Sired By: </b> {{siredBy }}</p>
+        <p><b>Sired By: </b> {{siredBy }}</p>
     {% endif %}
     {% if weight %}
-    <p><b>Weight: </b> {{weight }}</p>
+        <p><b>Weight: </b> {{weight }}</p>
     {% endif %}
     {% if ownedBy %}
-    <p><a href="{{ownedBy}}">{{ownedBy}}</a></p>
+        <p><a href="{{ownedBy}}">{{ownedBy}}</a></p>
     {% endif %}
     {% if locatedAt %}
-    <p><b>Located At: </b> {{locatedAt }}</p>
+        <p><b>Located At: </b> {{locatedAt }}</p>
     {% endif %}
     {% if phenologicalCondition %}
-    <p><b>Phenological Condition: </b> {{phenologicalCondition }}</p>
+        <p><b>Phenological Condition: </b> {{phenologicalCondition }}</p>
     {% endif %}
     {% if reproductiveCondition %}
-    <p><b>Reproductive Condition: </b> {{reproductiveCondition }}</p>
+        <p><b>Reproductive Condition: </b> {{reproductiveCondition }}</p>
     {% endif %}
     {% if healthCondition %}
-    <p><b>Health Condition: </b> {{healthCondition }}</p>
+        <p><b>Health Condition: </b> {{healthCondition }}</p>
     {% endif %}
     {% if fedWith %}
-    <p><b>Fed With: </b> {{fedWith }}</p>
+        <p><b>Fed With: </b> {{fedWith }}</p>
     {% endif %}
     {% if welfareCondition %}
-    <p><b>Welfare Condition: </b> {{welfareCondition }}</p>
+        <p><b>Welfare Condition: </b> {{welfareCondition }}</p>
     {% endif %}
 
 </div>
