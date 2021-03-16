@@ -1,22 +1,22 @@
 [
   {
     "type": "AgriFarm",
-    "schema": "http://127.0.0.1:8080/views/poi-templates/json/AgriFarm.json"
+    "schema": "https://raw.githubusercontent.com/Ficodes/smart-datamodel-views/master/views/poi-templates/json/AgriFarm.json"
   },
   {
     "type": "AgriGreenhouse",
-    "schema": "http://127.0.0.1:8080/views/poi-templates/json/AgriGreenhouse.json"
+    "schema": "https://raw.githubusercontent.com/Ficodes/smart-datamodel-views/master/views/poi-templates/json/AgriGreenhouse.json"
   },
   {
     "type": "AgriParcel",
-    "schema": "http://127.0.0.1:8080/views/poi-templates/json/AgriParcel.json"
+    "schema": "https://raw.githubusercontent.com/Ficodes/smart-datamodel-views/master/views/poi-templates/json/AgriParcel.json"
   },
   {
     "type": "AgriParcelRecord",
-    "schema": "http://127.0.0.1:8080/views/poi-templates/json/AgriParcelRecord.json"
+    "schema": "https://raw.githubusercontent.com/Ficodes/smart-datamodel-views/master/views/poi-templates/json/AgriParcelRecord.json"
   },
   {
     "type": "Animal",
-    "schema": "http://127.0.0.1:8080/views/poi-templates/json/Animal.json"
+    "schema": "https://raw.githubusercontent.com/Ficodes/smart-datamodel-views/master/views/poi-templates/json/Animal.json"
   }
 ]
