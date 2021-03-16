@@ -6,7 +6,7 @@
     "name",
     "id"
   ],
-  "infoWindow": "{%AgriGreenHouse.html%}",
+  "infoWindow": "{%AgriGreenhouse.html%}",
   "currentLocation": "currentLocation",
   "location": "location",
   "style": {
