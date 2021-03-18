@@ -1,6 +1,6 @@
 [
   {
     "type": "Alert",
-    "schema": "https://raw.githubusercontent.com/Ficodes/smart-datamodel-views/master/views/details-templates/html/Alert.html"
+    "template": "https://raw.githubusercontent.com/Ficodes/smart-datamodel-views/master/views/details-templates/html/Alert.html"
   }
 ]
