@@ -2,5 +2,17 @@
   {
     "type": "Alert",
     "template": "Alert.html"
+  },
+  {
+    "type": "Device",
+    "template": "Device.html"
+  },
+  {
+    "type": "DeviceModel",
+    "template": "DeviceModel.html"
+  },
+  {
+    "type": "Trip",
+    "template": "Trip.html"
   }
 ]
