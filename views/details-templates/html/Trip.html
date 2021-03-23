@@ -1,10 +1,68 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<div class="overflow-auto table-responsive">
+    <table class="table">
+        <tbody>
+        {% if id %}
+        <tr>
+            <td>Id</td>
+            <td>{{id}}</td>
+        </tr>
+        {% endif %}
+        {% if type %}
+        <tr>
+            <td>Type</td>
+            <td>{{type}}</td>
+        </tr>
+        {% endif %}
+        {% if tripStatusSequenceID %}
+        <tr>
+            <td>TripStatusSequenceID</td>
+            <td>{{tripStatusSequenceID}}</td>
+        </tr>
+        {% endif %}
+        {% if trackerID %}
+        <tr>
+            <td>TrackerID</td>
+            <td>{{trackerID}}</td>
+        </tr>
+        {% endif %}
+        {% if temperature  %}
+        <tr>
+            <td>Temperature</td>
+            <td>{{temperature}}</td>
+        </tr>
+        {% endif %}
+        {% if dateObserved %}
+        <tr>
+            <td>DateObserved</td>
+            <td>{{dateObserved}}</td>
+        </tr>
+        {% endif %}
+        {% if shipmentStatusCode %}
+        <tr>
+            <td>ShipmentStatusCode</td>
+            <td>{{shipmentStatusCode}}</td>
+        </tr>
+        {% endif %}
+        {% if shipmentStatusDescription %}
+        <tr>
+            <td>ShipmentStatusDescription</td>
+            <td>{{shipmentStatusDescription}}</td>
+        </tr>
+        {% endif %}
+        {% if stopNumber %}
+        <tr>
+            <td>StopNumber</td>
+            <td>{{stopNumber}}</td>
+        </tr>
+        {% endif %}
+        {% if batteryPct %}
+        <tr>
+            <td>BatteryPct</td>
+            <td>{{batteryPct}}</td>
+        </tr>
+        {% endif %}
+        </tbody>
+    </table>
+
+</div>

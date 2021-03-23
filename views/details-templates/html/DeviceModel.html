@@ -1,10 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
 
-</body>
-</html>
+<div class="overflow-auto table-responsive">
+    <table class="table">
+        <tbody>
+        {% if id %}
+        <tr>
+            <td>Id</td>
+            <td>{{id}}</td>
+        </tr>
+        {% endif %}
+        {% if type %}
+        <tr>
+            <td>Type</td>
+            <td>{{type}}</td>
+        </tr>
+        {% endif %}
+        {% if category %}
+        <tr>
+            <td>Category</td>
+            <td>{{category}}</td>
+        </tr>
+        {% endif %}
+        {% if modelName %}
+        <tr>
+            <td>Model Name</td>
+            <td>{{modelName}}</td>
+        </tr>
+        {% endif %}
+        {% if name %}
+        <tr>
+            <td>Name</td>
+            <td>{{name}}</td>
+        </tr>
+        {% endif %}
+        {% if manufacturerName %}
+        <tr>
+            <td>Manufacturer Name</td>
+            <td>{{manufacturerName}}</td>
+        </tr>
+        {% endif %}
+        {% if brandName %}
+        <tr>
+            <td>Brand Name</td>
+            <td>{{brandName}}</td>
+        </tr>
+        {% endif %}
+        {% if controlledProperty %}
+        <tr>
+            <td>Controlled Property</td>
+            <td>{{controlledProperty}}</td>
+        </tr>
+        {% endif %}
+
+        </tbody>
+    </table>
+
+</div>
