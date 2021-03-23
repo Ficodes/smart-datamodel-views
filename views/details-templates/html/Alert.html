@@ -26,10 +26,10 @@
             <td>{{subCategory}}</td>
         </tr>
         {% endif %}
-        {% if location %}
+        {% if location  %}
         <tr>
             <td>Location</td>
-            <td>{{location}}</td>
+            <td>{{location | json_string}}</td>
         </tr>
         {% endif %}
         {% if source %}
@@ -47,7 +47,7 @@
         {% if data %}
         <tr>
             <td>Data</td>
-            <td>{{data}}</td>
+            <td>{{data | json_string}}</td>
         </tr>
         {% endif %}
         </tbody>
