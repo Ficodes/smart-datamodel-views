@@ -21,12 +21,17 @@
         </tr>
         {% endif %}
         {% if batteryLevel %}
-        <tr>
+        <tr data-action="onTestFail">
             <td>BatteryLevel</td>
             <td>{{batteryLevel}}</td>
         </tr>
         {% endif %}
-
+        {% if refDeviceModel %}
+        <tr data-action="onClick">
+            <td>Ref DeviceModel</td>
+            <td>{{refDeviceModel}}</td>
+        </tr>
+        {% endif %}
         </tbody>
     </table>
 
