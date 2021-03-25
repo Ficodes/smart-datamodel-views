@@ -1,15 +1,44 @@
 <style>
-    .entity_id{
-        font-size: 0.9rem;
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
     }
-    .entity_type{
+    .entity{
+        margin: 1rem 0;
+        font-family: Lato, sans-serif;
+        -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+        -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s;
+    }
+    .entity h2{
+        color: #8a8a8a;
+        font-size: 1rem;
+
+    }
+    .entity .entity__id{
+        font-weight: bold;
+    }
+    .entity .entity__type{
+        font-size: 0.8rem;
+    }
+    .entity .table {
         font-size: 0.9rem;
     }
 </style>
-<h2><i class="fas fa-tablet-alt"></i> <span class="entity_id">{{id}}</span> / <span class="entity_type">{{type}}</span></h2>
+<div class="entity">
+    <h2><i class="fas fa-shuttle-van"></i> <span class="entity__id">{{id}}</span> / <span class="entity__type">{{type}}</span></h2>
 <div class="overflow-auto table-responsive">
     <table class="table">
         <tbody>
+        {% if location  %}
+        <tr>
+            <td>Location</td>
+            <td>{{location | location_format}}</td>
+        </tr>
+        {% endif %}
+
         {% if tripStatusSequenceID %}
         <tr>
             <td>TripStatusSequenceID</td>
@@ -60,5 +89,5 @@
         {% endif %}
         </tbody>
     </table>
-
+</div>
 </div>

@@ -1,17 +1,40 @@
-
+<style>
+    @keyframes fadein {
+        from { opacity: 0; }
+        to   { opacity: 1; }
+    }
+    .entity{
+        margin: 1rem 0;
+        font-family: Lato, sans-serif;
+        -webkit-animation: fadein 1s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 1s; /* Firefox < 16 */
+        -ms-animation: fadein 1s; /* Internet Explorer */
+        -o-animation: fadein 1s; /* Opera < 12.1 */
+        animation: fadein 1s;
+    }
+    .entity h2{
+        font-size: 1rem;
+        color: #8a8a8a;
+    }
+    .entity .entity__id{
+        font-weight: bold;
+    }
+    .entity .entity__type{
+        font-size: 0.8rem;
+    }
+    .entity .table {
+        font-size: 0.9rem;
+    }
+</style>
+<div class="entity">
+<h2><i class="fas fa-tablet-alt"></i> <span class="entity__id">{{id}}</span> / <span class="entity__type">{{type}}</span></h2>
 <div class="overflow-auto table-responsive">
     <table class="table">
         <tbody>
-        {% if id %}
+        {% if location  %}
         <tr>
-            <td>Id</td>
-            <td>{{id}}</td>
-        </tr>
-        {% endif %}
-        {% if type %}
-        <tr>
-            <td>Type</td>
-            <td>{{type}}</td>
+            <td>Location</td>
+            <td>{{location | location_format}}</td>
         </tr>
         {% endif %}
         {% if category %}
@@ -27,7 +50,7 @@
         </tr>
         {% endif %}
         {% if refDeviceModel %}
-        <tr data-action="onClick">
+        <tr data-action="onClick" data-param-value={{refDeviceModel}}>
             <td>Ref DeviceModel</td>
             <td>{{refDeviceModel}}</td>
         </tr>
@@ -35,4 +58,5 @@
         </tbody>
     </table>
 
+</div>
 </div>
